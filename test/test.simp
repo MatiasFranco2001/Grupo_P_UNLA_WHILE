@@ -1,0 +1,40 @@
+programa pruebaPromedio {
+    var contador;
+    var maximo;
+    var sumaPares;
+    var cantidadPares;
+    var promedio;
+    var mensaje;
+
+    // Inicializamos las variables
+    contador = 1;
+    maximo = 5;
+    sumaPares = 0;
+    cantidadPares = 0;
+
+    mostrar "--- Iniciando conteo del 1 al 5 ---";
+
+    mientras (contador <= maximo) {
+        
+        // Verificamos si el número actual es par
+        si (contador % 2 == 0) {
+            mostrar "El numero " + contador + " es par. Sumando...";
+            sumaPares = sumaPares + contador;
+            cantidadPares = cantidadPares + 1;
+        } sino {
+            mostrar "El numero " + contador + " es impar. Se ignora.";
+        }
+
+        contador = contador + 1;
+    }
+
+    mostrar "--- Bucle finalizado ---";
+
+    // Calculamos el promedio usando decimales (0.0 evita problemas si cantidadPares fuera 0)
+    promedio = (sumaPares + 0.0) / cantidadPares;
+
+    // Armamos la respuesta final mezclando texto y el resultado real
+    mensaje = "La suma de los pares dio " + sumaPares + " y su promedio es: " + promedio;
+    
+    mostrar mensaje;
+}

@@ -1,4 +1,4 @@
-programa pruebaPromedio {
+/*programa pruebaPromedio {
     var contador;
     var maximo;
     var sumaPares;
@@ -37,4 +37,16 @@ programa pruebaPromedio {
     mensaje = "La suma de los pares dio " + sumaPares + " y su promedio es: " + promedio;
     
     mostrar mensaje;
+}*/
+/*programa errorSintactico {
+	x=10; //no se inicializa x
+	mostrar x;//se usa variable sin declarar
+    }*/
+}
+programa errorRedeclaracion {
+    var contador;
+    var contador; // variable contador ya existe
+    
+    contador = 5;
+    mostrar contador;
 }
